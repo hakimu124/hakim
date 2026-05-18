@@ -16,7 +16,6 @@ interface AuthContextType {
   isLogin: boolean;
   setIsLogin: React.Dispatch<React.SetStateAction<boolean>>;
 }
-}
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
