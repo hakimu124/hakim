@@ -12,9 +12,10 @@ interface AuthContextType {
   logout: () => void;
   isAuthenticated: boolean;
   isAuthOpen: boolean;
-  setIsAuthOpen: (open: boolean) => void;
+  setIsAuthOpen: React.Dispatch<React.SetStateAction<boolean>>;
   isLogin: boolean;
-  setIsLogin: (login: boolean) => void;
+  setIsLogin: React.Dispatch<React.SetStateAction<boolean>>;
+}
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
