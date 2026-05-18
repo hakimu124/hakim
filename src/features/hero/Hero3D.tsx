@@ -63,15 +63,6 @@ export const Hero3D = () => {
         <PerspectiveCamera makeDefault position={[0, 0, 5]} />
         <FloatingShapes />
       </Canvas>
-      <style jsx>{`
-        .hero-3d-canvas {
-          position: absolute;
-          inset: 0;
-          z-index: -1;
-          pointer-events: none;
-          background: radial-gradient(circle at center, transparent, var(--charcoal));
-        }
-      `}</style>
     </div>
   );
 };

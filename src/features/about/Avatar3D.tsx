@@ -62,7 +62,7 @@ export function Avatar3D() {
       {/* The Real Image: Centerpiece */}
       <div className="absolute z-10 w-3/4 h-3/4 rounded-full overflow-hidden border-2 border-gold/30 shadow-2xl">
         <Image
-          src="/images/profile.avif" // User needs to provide this image
+          src="/images/gallery/photo-01.avif"
           alt="Abdihakim Mohamed"
           fill
           className="object-cover scale-110 transition-transform duration-700 hover:scale-125"

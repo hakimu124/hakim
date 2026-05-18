@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --color-obsidian:   #0A0A0A;   /* Background */
-  --color-surface:    #111111;   /* Card base */
+  --color-obsidian:   #050505;   /* Slightly deeper for more contrast */
+  --color-surface:    #0B0B0B;   /* Card base */
   --color-border:     rgba(255,255,255,0.08);
   --color-gold:       #D4AF37;   /* Primary accent */
   --color-gold-muted: #A8892A;   /* Hover states */
@@ -28,11 +28,78 @@
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Custom Animations */
+  --animate-glow-slow: glow-slow 10s infinite ease-in-out;
+  --animate-glow-fast: glow-fast 6s infinite ease-in-out;
+}
+
+@keyframes glow-slow {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+  33% { transform: translate(30px, -50px) scale(1.2); opacity: 0.5; }
+  66% { transform: translate(-20px, 20px) scale(0.8); opacity: 0.3; }
+}
+
+@keyframes glow-fast {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+  50% { transform: translate(-40px, 40px) scale(1.1); opacity: 0.6; }
 }
 
 body {
   background: var(--color-obsidian);
   color: var(--color-mist);
-  font-family: 'Inter', sans-serif; /* Fallback until fonts are wired */
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Premium Layered Shadows */
+.shadow-premium {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.4),
+    0 4px 6px -2px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.shadow-gold-premium {
+  box-shadow:
+    0 10px 25px -5px rgba(212, 175, 55, 0.2),
+    0 0 0 1px rgba(212, 175, 55, 0.1);
+}
+
+/* Ambient Background Glows */
+.bg-glow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+}
+
+.glow-1 {
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, var(--color-gold), transparent 70%);
+  top: -10%;
+  right: -10%;
+  animation: glow-slow 12s infinite ease-in-out;
+}
+
+.glow-2 {
+  width: 30vw;
+  height: 30vw;
+  background: radial-gradient(circle, #4A3B11, transparent 70%);
+  bottom: -5%;
+  left: -5%;
+  animation: glow-fast 8s infinite ease-in-out;
 }
 
