@@ -2,15 +2,13 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import './AbdihakimStyles.css';
-import { AuthModal } from './AuthModal';
 import { PremiumLoader } from './PremiumLoader';
 import { Hero3D } from '../hero/Hero3D';
 import { ProfilePortrait } from '../hero/ProfilePortrait';
 import { VisualGallery } from '../hero/VisualGallery';
 import { PortfolioBook } from './PortfolioBook';
-import { RadialSelector } from '@/components/ui/RadialSelector';
 import { MagneticCursor } from '@/components/ui/MagneticCursor';
 import { FloatingContactBar } from '@/components/ui/FloatingContactBar';
 import { IonIcon } from '@/components/ui/IonIcon';
