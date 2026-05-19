@@ -1,6 +1,10 @@
 "use client";
 import React from 'react';
 
-export const IonIcon = (props: React.HTMLAttributes<HTMLElement>) => {
+interface IonIconProps extends React.HTMLAttributes<HTMLElement> {
+  name: string;
+}
+
+export const IonIcon = (props: IonIconProps) => {
   return React.createElement('ion-icon', props);
 };
