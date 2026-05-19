@@ -1,11 +1,11 @@
 {
   "name": "Abdihakim Mohamed Portfolio",
   "short_name": "AM.DEV",
-  "description": "Professional Portfolio of Abdihakim Mohamed - Full-Stack Developer & UI/UX Designer",
+  "description": "Professional portfolio of Abdihakim Mohamed, a Full-Stack Developer & UI/UX Designer based in Eldoret, Kenya.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#020202",
-  "theme_color": "#D4AF37",
+  "background_color": "#05070a",
+  "theme_color": "#00d4ff",
   "icons": [
     {
       "src": "/favicon.ico",

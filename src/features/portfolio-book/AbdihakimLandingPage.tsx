@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion, AnimatePresence } from 'framer-motion';
 import './AbdihakimStyles.css';
 import { AuthModal } from './AuthModal';
-import { HackingPortalLoader } from './HackingPortalLoader';
+import { PremiumLoader } from './PremiumLoader';
 import { Hero3D } from '../hero/Hero3D';
 import { ProfilePortrait } from '../hero/ProfilePortrait';
 import { VisualGallery } from '../hero/VisualGallery';
@@ -168,13 +168,13 @@ export const AbdihakimLandingPage = ({ theme, toggleTheme }: { theme: 'light' | 
   }, []);
 
   return (
-    <div data-theme={theme} className="abdihakim-container" style={{'--charcoal': theme === 'dark' ? '#F5F0E8' : '#1A1814'} as any}>
+    <div data-theme={theme} className="abdihakim-container" style={{'--charcoal': theme === 'dark' ? '#F5F0E8' : '#1A1814'} as any /* eslint-disable-line @typescript-eslint/no-explicit-any */}>
       <MagneticCursor />
       <FloatingContactBar />
       <GlowingTabs />
 
       {isLoading && (
-        <HackingPortalLoader onComplete={handleLoaderComplete} />
+        <PremiumLoader onComplete={handleLoaderComplete} />
       )}
 
       <section className="hero-section" id="home">
@@ -286,7 +286,7 @@ export const AbdihakimLandingPage = ({ theme, toggleTheme }: { theme: 'light' | 
               digital worlds
             </h2>
             <p className="premium-text">
-              I'm Abdihakim Mohamed — a passionate full-stack developer based in Eldoret, Kenya, crafting high-performance digital experiences with modern web technologies and 3D design. I build things people remember, not just use.
+              I&apos;m Abdihakim Mohamed — a passionate full-stack developer based in Eldoret, Kenya, crafting high-performance digital experiences with modern web technologies and 3D design. I build things people remember, not just use.
             </p>
             <div className="stats-grid-premium">
               <div className="stat-box-premium">
@@ -474,7 +474,7 @@ export const AbdihakimLandingPage = ({ theme, toggleTheme }: { theme: 'light' | 
                 position: 'relative'
               }}
             >
-              <div style={{fontSize: '40px', color: 'var(--accent)', position: 'absolute', top: '20px', left: '20px', opacity: 0.3}}>"</div>
+              <div style={{fontSize: '40px', color: 'var(--accent)', position: 'absolute', top: '20px', left: '20px', opacity: 0.3}}>&quot;</div>
               <p className="premium-text" style={{fontStyle: 'italic', marginBottom: '20px'}}>{t.text}</p>
               <div style={{display: 'flex', alignItems: 'center', gap: '15px'}}>
                 <div style={{width: '40px', height: '40px', borderRadius: '50%', background: 'var(--accent)'}} />
@@ -521,8 +521,8 @@ export const AbdihakimLandingPage = ({ theme, toggleTheme }: { theme: 'light' | 
         <div className="contact-inner-premium">
           <div className="reveal">
             <div className="section-label">Get In Touch</div>
-            <h2 className="premium-title" style={{fontSize: 'clamp(48px, 7vw, 112px)'}}>Let's<br /><em style={{color: 'var(--accent)'}}>build</em><br />together.</h2>
-            <p className="premium-text">Whether you have a project in mind, want to collaborate, or just want to say hello — I'm always up for a good conversation.</p>
+            <h2 className="premium-title" style={{fontSize: 'clamp(48px, 7vw, 112px)'}}>Let&apos;s<br /><em style={{color: 'var(--accent)'}}>build</em><br />together.</h2>
+            <p className="premium-text">Whether you have a project in mind, want to collaborate, or just want to say hello — I&apos;m always up for a good conversation.</p>
             <div className="contact-links-premium" style={{marginTop: '3rem', display: 'flex', flexDirection: 'column', gap: '1rem'}}>
               <a href="mailto:abdihakma0@gmail.com" className="contact-link-premium" style={{padding: '1.25rem 0', borderBottom: '1px solid var(--line)', textDecoration: 'none', color: 'var(--charcoal)', display: 'flex', justifyContent: 'space-between'}}>
                 <div>
@@ -545,7 +545,7 @@ export const AbdihakimLandingPage = ({ theme, toggleTheme }: { theme: 'light' | 
             <form style={{marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem'}} onSubmit={(e) => { e.preventDefault(); setSubmitted(true); setTimeout(() => setSubmitted(false), 5000); }}>
               {submitted && (
                 <div style={{background: 'var(--accent)', color: 'white', padding: '10px', borderRadius: '8px', textAlign: 'center', fontSize: '13px', marginBottom: '1rem'}}>
-                  Message sent successfully! I'll get back to you soon.
+                  Message sent successfully! I&apos;ll get back to you soon.
                 </div>
               )}
               <div style={{display: 'flex', flexDirection: 'column', gap: '0.6rem'}}>

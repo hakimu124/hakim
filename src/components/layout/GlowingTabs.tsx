@@ -30,7 +30,7 @@ export const GlowingTabs = () => {
       style={{
         '--mouse-x': '0px',
         '--mouse-y': '0px',
-      } as any}
+      } as any} // eslint-disable-line @typescript-eslint/no-explicit-any
     >
       {TABS.map((tab) => (
         <motion.a

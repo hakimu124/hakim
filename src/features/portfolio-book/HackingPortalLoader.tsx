@@ -18,16 +18,14 @@ export const HackingPortalLoader = ({ onComplete }: { onComplete: () => void }) 
   const [progress, setProgress] = useState(0);
   const [visibleLogs, setVisibleLogs] = useState<number>(0);
   const [signatureVisible, setSignatureVisible] = useState(false);
-  const [nodes, setNodes] = useState<{top: string, left: string, delay: string}[]>([]);
-  const [time, setTime] = useState("");
-
-  useEffect(() => {
-    setNodes([...Array(15)].map(() => ({
+  const [nodes, setNodes] = useState<{top: string, left: string, delay: string}[]>(() =>
+    [...Array(15)].map(() => ({
       top: `${Math.random() * 100}%`,
       left: `${Math.random() * 100}%`,
       delay: `${Math.random() * 2}s`
-    })));
-  }, []);
+    }))
+  );
+  const [time, setTime] = useState("");
 
   useEffect(() => {
     // HUD Clock

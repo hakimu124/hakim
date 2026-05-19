@@ -13,25 +13,98 @@
 @media (max-width: 768px) {
     .book-wrapper {
         width: 95vw;
-        height: 70vh;
-        perspective: 150rem;
+        height: 85vh;
+        perspective: 100rem;
     }
-    .book-page {
+    .book {
+        flex-direction: column;
+        height: 100%;
+    }
+    .book .book-page {
+        width: 100% !important;
+        height: 50% !important;
+        position: relative !important;
+        transform: none !important;
+        border-radius: 0.6rem;
         padding: 1rem !important;
     }
+    .book-page.page-right {
+        position: relative !important;
+        right: auto !important;
+        transform: none !important;
+    }
+    .book-page.page-right.turn {
+        transform: none !important;
+    }
+    .book-page .page-front,
+    .book-page .page-back {
+        position: relative !important;
+        transform: none !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 1rem !important;
+    }
+    .profile-page {
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    .profile-page img {
+        max-width: 120px;
+    }
     .profile-page h1 {
-        font-size: 1.8rem !important;
+        font-size: 1.5rem !important;
     }
     .profile-page h3 {
-        font-size: 1.1rem !important;
+        font-size: 1rem !important;
     }
     .profile-page p {
-        font-size: 0.9rem !important;
+        font-size: 0.85rem !important;
+    }
+    .btn-box {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
     .btn {
-        width: 7rem !important;
-        height: 2.5rem !important;
-        font-size: 0.8rem !important;
+        width: 100% !important;
+        max-width: 200px;
+    }
+    .workeduc-box .workeduc-content {
+        padding-left: 1rem;
+    }
+    .services-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .services-content {
+        font-size: 0.8rem;
+    }
+    .services-content .btn {
+        width: 6rem !important;
+        font-size: 0.7rem !important;
+    }
+    .skills-box .skills-content {
+        flex: 1 1 100%;
+    }
+    .skills-content .content span {
+        width: 4.5rem;
+        height: 4rem;
+        font-size: 0.8rem;
+    }
+    .portfolio-box .img-box {
+        height: 12rem;
+    }
+    .portfolio-box .info-box .info-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .contact-box .field {
+        font-size: 0.9rem;
+    }
+    .nextprev-btn {
+        display: none;
     }
 }
 

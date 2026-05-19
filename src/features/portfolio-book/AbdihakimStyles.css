@@ -1137,6 +1137,9 @@
     height: auto;
     padding: 20px 0;
   }
+  .section-premium {
+    padding: 3rem 1rem;
+  }
 }
 
 /* ── TECH-NOIR ATMOSPHERE ────────────────────────── */
@@ -1505,6 +1508,9 @@
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .floating-contact-bar {
+    display: none !important;
+  }
 }
 
 
@@ -1583,6 +1589,10 @@
   .profile-portrait-container.about {
     width: 200px;
     height: 300px;
+  }
+  .about-grid, .contact-inner-premium {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
   }
 }
 

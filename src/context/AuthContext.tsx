@@ -20,16 +20,15 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null>(() => {
+    if (typeof window !== 'undefined') {
+      const savedUser = localStorage.getItem('auth_user');
+      return savedUser ? JSON.parse(savedUser) : null;
+    }
+    return null;
+  });
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
-
-  useEffect(() => {
-    const savedUser = localStorage.getItem('auth_user');
-    if (savedUser) {
-      setUser(JSON.parse(savedUser));
-    }
-  }, []);
 
   const login = (userData: User) => {
     setUser(userData);

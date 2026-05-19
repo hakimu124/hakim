@@ -46,12 +46,12 @@ export const PWAInstallModal = ({ isOpen, onClose }: PWAInstallModalProps) => {
 
             <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 group hover:bg-white/10 transition-all">
               <div className="w-8 h-8 rounded-full bg-gold text-obsidian flex items-center justify-center font-bold text-sm">2</div>
-              <p className="text-white/80 text-sm">Scroll down and select <span className="text-gold font-medium">"Add to Home Screen"</span>.</p>
+              <p className="text-white/80 text-sm">Scroll down and select <span className="text-gold font-medium">&quot;Add to Home Screen&quot;</span>.</p>
             </div>
 
             <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 group hover:bg-white/10 transition-all">
               <div className="w-8 h-8 rounded-full bg-gold text-obsidian flex items-center justify-center font-bold text-sm">3</div>
-              <p className="text-white/80 text-sm">Tap <span className="text-gold font-medium">"Add"</span> in the top right corner.</p>
+              <p className="text-white/80 text-sm">Tap <span className="text-gold font-medium">&quot;Add&quot;</span> in the top right corner.</p>
             </div>
           </div>
 

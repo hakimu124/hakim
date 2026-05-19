@@ -3,7 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTheme } from '@/components/theme/ThemeProvider';
-import { Moon, Sun, Home, Briefcase, User, MessageSquare, FileText, Mail } from 'lucide-react';
+import { usePWA } from '@/hooks/usePWA';
+import { Moon, Sun, Home, Briefcase, User, MessageSquare, Mail, Wrench } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface SidebarProps {
@@ -13,14 +14,14 @@ interface SidebarProps {
 
 export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
   const { theme, toggleTheme } = useTheme();
+  const { handleInstall } = usePWA();
   const pathname = usePathname();
 
   const navLinks = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Projects', href: '/projects', icon: Briefcase },
     { name: 'About', href: '/about', icon: User },
-    { name: 'How We Work', href: '/how-we-work', icon: MessageSquare },
-    { name: 'Blog', href: '/blog', icon: FileText },
+    { name: 'Services', href: '#services', icon: Wrench },
     { name: 'Contact', href: '/contact', icon: Mail },
   ];
 
@@ -34,15 +35,6 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
       <div className={`fixed top-0 left-0 h-full w-80 bg-[#05070a] text-white z-[1500] transition-transform duration-500 ease-out border-r border-cyan-500/30 ${isOpen ? 'translate-x-0' : '-translate-x-full'} shadow-[10px_0_30px_rgba(0,0,0,0.5)]`}>
         <div className="flex flex-col h-full p-8">
           <div className="flex items-center justify-between mb-12">
-            <div className="flex items-center gap-3 group cursor-pointer">
-              <div className="w-12 h-12 rounded-full bg-cyan-500 flex items-center justify-center text-black font-bold text-xl shadow-[0_0_15px_rgba(6,182,212,0.5)] group-hover:shadow-[0_0_25px_rgba(6,182,212,0.8)] transition-all">
-                AM
-              </div>
-              <div className="transition-transform group-hover:translate-x-1 duration-300">
-                <h3 className="font-syne font-bold text-lg leading-none text-white">Abdihakim Mohamed</h3>
-                <span className="text-cyan-500/60 text-xs font-mono tracking-tighter uppercase">Cybersecurity Engineer</span>
-              </div>
-            </div>
             <button onClick={onClose} className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-cyan-500/10 transition-all">
               <span className="text-2xl">✕</span>
             </button>
@@ -96,15 +88,16 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
               <span className="font-mono text-sm transition-colors group-hover:text-cyan-400">{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
             </button>
 
-            <Link
-              href="/cv.pdf"
-              target="_blank"
-              onClick={onClose}
+            <button
+              onClick={() => {
+                handleInstall();
+                onClose();
+              }}
               className="flex items-center justify-center gap-2 w-full p-4 rounded-xl bg-cyan-500 text-black font-bold text-sm hover:bg-cyan-400 transition-all shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] group"
             >
-              Download CV
+              Download App
               <span className="group-hover:translate-x-1 transition-transform">↗</span>
-            </Link>
+            </button>
           </div>
         </div>
       </div>

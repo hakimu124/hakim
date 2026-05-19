@@ -34,11 +34,11 @@ export default function AboutPage() {
             className="space-y-6"
           >
             <p className="text-xl text-gray-300 leading-relaxed font-light">
-              I'm <strong className="text-white font-semibold">Abdihakim Mohamed</strong>, a Full-Stack Developer and UI/UX Designer based in Eldoret, Kenya.
+              I&apos;m <strong className="text-white font-semibold">Abdihakim Mohamed</strong>, a Full-Stack Developer and UI/UX Designer based in Eldoret, Kenya.
               I specialize in bridging the gap between complex backend logic and high-end visual storytelling.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              With over 5 years of experience, I've transitioned from building simple websites to architecting complex 3D web experiences.
+              With over 5 years of experience, I&apos;ve transitioned from building simple websites to architecting complex 3D web experiences.
               My approach combines the precision of cybersecurity engineering with the fluidity of modern motion design.
             </p>
           </motion.div>

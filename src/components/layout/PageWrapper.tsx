@@ -21,7 +21,7 @@ export const PageWrapper = ({ children, title, subtitle }: PageWrapperProps) => 
       {title && (
         <div className="mb-16 text-center md:text-left">
           <div className="text-cyan-500 font-mono text-xs uppercase tracking-widest mb-2">
-            // {title}
+            {"// "}{title}
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white font-syne leading-tight">
             {title} <span className="text-cyan-500">.</span>

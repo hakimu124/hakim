@@ -43,6 +43,7 @@ const Particles = () => {
     const geo = new THREE.BufferGeometry();
     const positions = new Float32Array(200 * 3);
     for (let i = 0; i < 200 * 3; i++) {
+      // eslint-disable-next-line react-hooks/purity
       positions[i] = (Math.random() - 0.5) * 15;
     }
     geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));

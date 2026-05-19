@@ -75,7 +75,7 @@ export const PortfolioBook = ({ onClose, theme }: { onClose: () => void; theme: 
             </div>
 
             <p>
-              Hi, I'm Abdihakim Mohamed, a professional Web Developer & UI/UX Designer based in Eldoret City, Kenya.
+              Hi, I&apos;m Abdihakim Mohamed, a professional Web Developer & UI/UX Designer based in Eldoret City, Kenya.
               I specialize in crafting high-performance, visually stunning digital experiences with a focus on 3D interactivity and clean architecture.
             </p>
 

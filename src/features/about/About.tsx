@@ -19,7 +19,7 @@ export function About() {
           </h2>
           <BentoCard className="max-w-2xl">
             <p className="text-mist-dim leading-relaxed text-lg">
-              I'm a creative developer and designer based in Nairobi,
+              I&apos;m a creative developer and designer based in Nairobi,
               passionate about building immersive digital experiences that
               push the boundaries of web technology.
             </p>

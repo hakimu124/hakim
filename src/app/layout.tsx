@@ -20,6 +20,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Abdihakim Mohamed | Full-Stack Developer – Eldoret, Kenya",
   description: "Professional portfolio of Abdihakim Mohamed, a Full-Stack Developer & UI/UX Designer based in Eldoret, Kenya, crafting premium digital experiences.",
+  verification: {
+    google: "3mPDnu95-y1vZr12PdyaFKkhp0IQrny1gf1Mz7rxxfw",
+  },
 };
 
 export default function RootLayout({
